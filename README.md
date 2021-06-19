@@ -1,5 +1,5 @@
 # Task-manager-application
-**Tools**: Node.js, REST API's using Express.js, MongoDB <.br>
+**Tools**: Node.js, REST API's using Express.js, MongoDB 
 
 **NPM libraries**: </br>
 - mongoose: database querying </br>
