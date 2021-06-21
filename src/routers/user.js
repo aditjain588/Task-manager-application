@@ -105,21 +105,24 @@ const upload = multer({
     
 })
 
+// upload a profile pic
 router.post('/users/me/avatar', auth, upload.single('avatar'), async (req, res) => {
-    //req.user.avatar = req.file.buffer
-    const buffer = await sharp(req.file.buffer).png().toBuffer()
+    const buffer = await sharp(req.file.buffer).resize({width: 250, height: 250}).png().toBuffer()
+    req.user.avatar = buffer
     await req.user.save()
     res.send()
 }, (error, req, res, next) => {
     res.status(400).send({error: error.message})
 })
 
+// delete profile pic
 router.delete('/users/me/avatar', auth, async (req, res) => {
     req.user.avatar = undefined
     await req.user.save()
     res.send()
 })
 
+//P!_8wrYn5,qKSD,
 // get profile pic of user using user ID.
 router.get('/users/:id/avatar', async (req, res) => {
     
