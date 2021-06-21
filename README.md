@@ -7,4 +7,7 @@ Using task manager applicaiton, an user can add to-do tasks with description and
 - Tasks association: Task created by one user are only associated to his account and won't be accessible by other users. Means one user cannot delete/update the tasks of another user.
 - User can upload a profile pic and can delete an existing profile pic.
 
+**TO DO**
+- Currently this project only has a backend, where REST API's are tested using POSTMAN. In the future, a frontend will be added which will make the application easy to use.
+
 This project was build as part of an online course: https://www.udemy.com/course/the-complete-nodejs-developer-course-2/
